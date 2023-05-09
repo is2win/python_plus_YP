@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+    Страница не найдена - 404
+{% endblock %}
+{% block body %}
+    <h1>Страница 404</h1>
+    <p>Странциа с адресом {{ path }} не существует</p>
+    <a href="{% url 'posts:index' %}">На главную страницу</a>
+{% endblock %}

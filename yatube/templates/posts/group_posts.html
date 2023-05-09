@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    {{ group.slug }}
+    {% for post in page_obj %}
+        <div><h1>Текст записи</h1>
+            <p>{{ post.text }}</p>
+        </div>
+    {% endfor %}
+    {% include 'include/paginator.html' %}
+{% endblock %}

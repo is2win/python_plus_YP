@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Текст написал - {{ post.author }}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <p>
+            {{ post.text }}
+        </p>
+    </div>
+    <div>
+        <p>
+            <a href="{% url 'posts:edit_post' post.pk %}">Редактировать пост</a>
+        </p>
+    </div>
+{% endblock %}
